@@ -28,6 +28,30 @@ namespace Infinite_Awaiting_challenge_fixer_for_Quake3 {
             }
         }
 
+        private void FlushDNS() {
+            try {
+                new Process {
+                    StartInfo = {
+                        FileName = "ipconfig",
+                        Arguments = "/flushdns",
+                        UseShellExecute = false,
+                        CreateNoWindow = true,
+                        WindowStyle = ProcessWindowStyle.Hidden
+                    }
+                }.Start();
+            }
+            catch (Exception) { 
+                if (lng == "1049") {
+                    rtxt_log.AppendText(Environment.NewLine + "Не удалось сбросить кэш DNS!"+ Environment.NewLine);
+                }
+                else {
+                    {
+                        rtxt_log.AppendText(Environment.NewLine + "Failed to flush the DNS cache!" + Environment.NewLine);
+                    }
+                }
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e) { 
             if (lng == "1049") { 
                 rtxt_log.Text = "Данный патч может исправить ошибку, когда у вас бесконечно висит"; 
@@ -119,6 +143,7 @@ namespace Infinite_Awaiting_challenge_fixer_for_Quake3 {
             finally { 
                 patch_status = true;
                 patchStatus();
+                FlushDNS();
             }  
         }
 
@@ -182,6 +207,7 @@ namespace Infinite_Awaiting_challenge_fixer_for_Quake3 {
             finally {  
                 patch_status = false;
                 patchStatus();
+                FlushDNS();
             }
         }
 
