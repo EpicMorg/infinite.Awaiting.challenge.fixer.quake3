@@ -24,27 +24,30 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
-            this.txt_log = new System.Windows.Forms.RichTextBox();
+            this.rtxt_log = new System.Windows.Forms.RichTextBox();
             this.btn_patch = new System.Windows.Forms.Button();
             this.btn_unpatch = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.lbl_null1 = new System.Windows.Forms.Label();
+            this.lbl_null2 = new System.Windows.Forms.Label();
+            this.lnl_null3 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // txt_log
+            // rtxt_log
             // 
-            this.txt_log.Location = new System.Drawing.Point(12, 66);
-            this.txt_log.Name = "txt_log";
-            this.txt_log.ReadOnly = true;
-            this.txt_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.txt_log.Size = new System.Drawing.Size(374, 194);
-            this.txt_log.TabIndex = 0;
-            this.txt_log.Text = "";
+            this.rtxt_log.Location = new System.Drawing.Point(12, 66);
+            this.rtxt_log.Name = "rtxt_log";
+            this.rtxt_log.ReadOnly = true;
+            this.rtxt_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.rtxt_log.Size = new System.Drawing.Size(374, 214);
+            this.rtxt_log.TabIndex = 0;
+            this.rtxt_log.Text = "";
             // 
             // btn_patch
             // 
-            this.btn_patch.Location = new System.Drawing.Point(121, 266);
+            this.btn_patch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_patch.Location = new System.Drawing.Point(121, 286);
             this.btn_patch.Name = "btn_patch";
             this.btn_patch.Size = new System.Drawing.Size(75, 23);
             this.btn_patch.TabIndex = 1;
@@ -54,7 +57,8 @@
             // 
             // btn_unpatch
             // 
-            this.btn_unpatch.Location = new System.Drawing.Point(202, 266);
+            this.btn_unpatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_unpatch.Location = new System.Drawing.Point(202, 286);
             this.btn_unpatch.Name = "btn_unpatch";
             this.btn_unpatch.Size = new System.Drawing.Size(75, 23);
             this.btn_unpatch.TabIndex = 2;
@@ -75,25 +79,47 @@
             // 
             // lbl_null1
             // 
-            this.lbl_null1.AutoSize = true;
             this.lbl_null1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbl_null1.Location = new System.Drawing.Point(70, 12);
             this.lbl_null1.Name = "lbl_null1";
-            this.lbl_null1.Size = new System.Drawing.Size(311, 16);
+            this.lbl_null1.Size = new System.Drawing.Size(316, 16);
             this.lbl_null1.TabIndex = 4;
             this.lbl_null1.Text = "Infinite \"Awaiting challenge\" fixer for Quake3";
+            this.lbl_null1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_null2
+            // 
+            this.lbl_null2.AutoSize = true;
+            this.lbl_null2.Location = new System.Drawing.Point(70, 37);
+            this.lbl_null2.Name = "lbl_null2";
+            this.lbl_null2.Size = new System.Drawing.Size(88, 13);
+            this.lbl_null2.TabIndex = 5;
+            this.lbl_null2.Text = "Version 1.1, Final";
+            // 
+            // lnl_null3
+            // 
+            this.lnl_null3.AutoSize = true;
+            this.lnl_null3.Location = new System.Drawing.Point(242, 37);
+            this.lnl_null3.Name = "lnl_null3";
+            this.lnl_null3.Size = new System.Drawing.Size(141, 13);
+            this.lnl_null3.TabIndex = 6;
+            this.lnl_null3.TabStop = true;
+            this.lnl_null3.Text = "by STAM, EpicMorg © 2013";
+            this.lnl_null3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnl_null3_LinkClicked);
             // 
             // frm_main
             // 
             this.AcceptButton = this.btn_patch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 301);
+            this.ClientSize = new System.Drawing.Size(398, 321);
+            this.Controls.Add(this.lnl_null3);
+            this.Controls.Add(this.lbl_null2);
             this.Controls.Add(this.lbl_null1);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.btn_unpatch);
             this.Controls.Add(this.btn_patch);
-            this.Controls.Add(this.txt_log);
+            this.Controls.Add(this.rtxt_log);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -110,11 +136,13 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox txt_log;
+        private System.Windows.Forms.RichTextBox rtxt_log;
         private System.Windows.Forms.Button btn_patch;
         private System.Windows.Forms.Button btn_unpatch;
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.Label lbl_null1;
+        private System.Windows.Forms.Label lbl_null2;
+        private System.Windows.Forms.LinkLabel lnl_null3;
     }
 }
 
