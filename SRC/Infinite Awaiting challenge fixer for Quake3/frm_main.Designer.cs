@@ -40,14 +40,14 @@
             this.rtxt_log.Name = "rtxt_log";
             this.rtxt_log.ReadOnly = true;
             this.rtxt_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtxt_log.Size = new System.Drawing.Size(374, 214);
+            this.rtxt_log.Size = new System.Drawing.Size(374, 238);
             this.rtxt_log.TabIndex = 0;
             this.rtxt_log.Text = "";
             // 
             // btn_patch
             // 
             this.btn_patch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_patch.Location = new System.Drawing.Point(121, 286);
+            this.btn_patch.Location = new System.Drawing.Point(121, 310);
             this.btn_patch.Name = "btn_patch";
             this.btn_patch.Size = new System.Drawing.Size(75, 23);
             this.btn_patch.TabIndex = 1;
@@ -58,7 +58,7 @@
             // btn_unpatch
             // 
             this.btn_unpatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_unpatch.Location = new System.Drawing.Point(202, 286);
+            this.btn_unpatch.Location = new System.Drawing.Point(202, 310);
             this.btn_unpatch.Name = "btn_unpatch";
             this.btn_unpatch.Size = new System.Drawing.Size(75, 23);
             this.btn_unpatch.TabIndex = 2;
@@ -92,9 +92,9 @@
             this.lbl_null2.AutoSize = true;
             this.lbl_null2.Location = new System.Drawing.Point(70, 37);
             this.lbl_null2.Name = "lbl_null2";
-            this.lbl_null2.Size = new System.Drawing.Size(88, 13);
+            this.lbl_null2.Size = new System.Drawing.Size(106, 13);
             this.lbl_null2.TabIndex = 5;
-            this.lbl_null2.Text = "Version 1.1, Final";
+            this.lbl_null2.Text = "Version 1.1.0.1, Final";
             // 
             // lnl_null3
             // 
@@ -112,7 +112,7 @@
             this.AcceptButton = this.btn_patch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 321);
+            this.ClientSize = new System.Drawing.Size(398, 345);
             this.Controls.Add(this.lnl_null3);
             this.Controls.Add(this.lbl_null2);
             this.Controls.Add(this.lbl_null1);

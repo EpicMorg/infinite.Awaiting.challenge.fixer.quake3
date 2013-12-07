@@ -40,13 +40,13 @@ namespace Infinite_Awaiting_challenge_fixer_for_Quake3 {
                     }
                 }.Start();
             }
-            catch (Exception) { 
+            catch (Exception ex) { 
                 if (lng == "1049") {
-                    rtxt_log.AppendText(Environment.NewLine + "Не удалось сбросить кэш DNS!"+ Environment.NewLine);
+                    rtxt_log.AppendText(Environment.NewLine + "Не удалось сбросить кэш DNS!" + Environment.NewLine + Environment.NewLine + ex);
                 }
                 else {
                     {
-                        rtxt_log.AppendText(Environment.NewLine + "Failed to flush the DNS cache!" + Environment.NewLine);
+                        rtxt_log.AppendText(Environment.NewLine + "Failed to flush the DNS cache!" + Environment.NewLine + Environment.NewLine + ex);
                     }
                 }
             }
@@ -105,7 +105,7 @@ namespace Infinite_Awaiting_challenge_fixer_for_Quake3 {
                 "127.0.0.1 master4.evenbalance.com" + Environment.NewLine +
                 "127.0.0.1 namereg.evenbalance.com" + Environment.NewLine +
                 "127.0.0.1 authorize.quake3arena.com" + Environment.NewLine + Environment.NewLine +
-                "из файла: " + hosts + Environment.NewLine);
+                "из файла: " + hosts + Environment.NewLine + Environment.NewLine +"Очистка DNS кэша..."+ Environment.NewLine);
                     rtxt_log.AppendText(Environment.NewLine + "------------------------------------------------------------------------" + Environment.NewLine + "Патч применен успешно!");
            
                 }
@@ -120,7 +120,7 @@ namespace Infinite_Awaiting_challenge_fixer_for_Quake3 {
                  "127.0.0.1 master4.evenbalance.com" + Environment.NewLine +
                  "127.0.0.1 namereg.evenbalance.com" + Environment.NewLine +
                  "127.0.0.1 authorize.quake3arena.com" + Environment.NewLine + Environment.NewLine +
-                 "from file: " + hosts + Environment.NewLine);
+                 "from file: " + hosts + Environment.NewLine + Environment.NewLine + "Flushing the DNS cache..." + Environment.NewLine);
                     rtxt_log.AppendText(Environment.NewLine + "------------------------------------------------------------------------" + Environment.NewLine + "Patching successfully Done!");
                 }
              
@@ -164,7 +164,7 @@ namespace Infinite_Awaiting_challenge_fixer_for_Quake3 {
                 "127.0.0.1 master4.evenbalance.com" + Environment.NewLine +
                 "127.0.0.1 namereg.evenbalance.com" + Environment.NewLine +
                 "127.0.0.1 authorize.quake3arena.com" + Environment.NewLine + Environment.NewLine +
-                "из файла: " + hosts + Environment.NewLine);
+                "из файла: " + hosts + Environment.NewLine + Environment.NewLine + "Очистка DNS кэша..." + Environment.NewLine);
                     rtxt_log.AppendText(Environment.NewLine + "------------------------------------------------------------------------" + Environment.NewLine + "Откат патча произведен успешно!");  
                 }
                 else {
@@ -178,7 +178,7 @@ namespace Infinite_Awaiting_challenge_fixer_for_Quake3 {
                 "127.0.0.1 master4.evenbalance.com" + Environment.NewLine +
                 "127.0.0.1 namereg.evenbalance.com" + Environment.NewLine +
                 "127.0.0.1 authorize.quake3arena.com" + Environment.NewLine + Environment.NewLine +
-                "from file: " + hosts + Environment.NewLine);
+                "from file: " + hosts + Environment.NewLine + Environment.NewLine + "Flushing the DNS cache..." + Environment.NewLine);
                     rtxt_log.AppendText(Environment.NewLine + "------------------------------------------------------------------------" + Environment.NewLine + "Unpatching successfully Done!");
                 }
 
